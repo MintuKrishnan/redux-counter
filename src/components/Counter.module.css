@@ -1,7 +1,7 @@
 .counter {
   margin: 5rem auto;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-  width: 40rem;
+  width: 80%;
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
@@ -20,4 +20,7 @@
   color: #3c0080;
   margin: 2rem 0;
   font-weight: bold;
+}
+.counter button {
+  margin: 1rem;
 }
