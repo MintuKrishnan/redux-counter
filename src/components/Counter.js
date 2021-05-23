@@ -33,15 +33,18 @@ const Counter = () => {
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
-      <div>
-        <button onClick={incrementHandler}>Increament </button>
-        <button onClick={incrementHandlerby5}>Increament 5</button>
-        {toggle && <div className={classes.value}> {counter} </div>}
-        <button onClick={decrementHandler}>Decreament</button>
-        <button onClick={decrementHandlerby5}>Decreament 5</button>
-      </div>
-
-      <button onClick={toggleCounterHandler}>Hide Counter</button>
+      <button onClick={toggleCounterHandler}>
+        {toggle ? 'Hide' : 'Show'} Counter
+      </button>
+      {toggle && (
+        <div>
+          <div className={classes.value}> {counter} </div>
+          <button onClick={incrementHandler}>Increment </button>
+          <button onClick={incrementHandlerby5}>Increment 5</button>
+          <button onClick={decrementHandler}>Decrement</button>
+          <button onClick={decrementHandlerby5}>Decrement 5</button>
+        </div>
+      )}
     </main>
   );
 };
